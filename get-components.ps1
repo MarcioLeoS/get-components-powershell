@@ -3,7 +3,7 @@ $info = Get-ComputerInfo | Select-Object CsName, WindowsVersion, CsModel, CsProc
 $cpu = Get-WmiObject Win32_Processor | Select-Object Name, NumberOfCores, MaxClockSpeed
 $ram = Get-WmiObject Win32_PhysicalMemory | Measure-Object Capacity -Sum
 $hdd = Get-WmiObject Win32_DiskDrive | Select-Object Model, Size
-$gpu = Get-WmiObject Win32_VideoController | Select-Object Name, AdapterRAM, DriverVersion| 
+$gpu = Get-WmiObject Win32_VideoController | Select-Object Name, AdapterRAM, DriverVersion
 
 # Crear un reporte
 $reporte = "Reporte de Sistema:`n"
